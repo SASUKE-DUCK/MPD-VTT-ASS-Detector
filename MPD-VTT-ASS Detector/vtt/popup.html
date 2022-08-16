@@ -1,0 +1,48 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <style>
+    body {
+      min-width:300px;
+      max-width:300px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <h4 style="padding-top: 10px; margin:0px" class="center-align">.MPD Detector</h4>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col s12">
+      <h6 style="margin-bottom: 0px;" class="header orange-text">Last detected .mpd file:</h6>
+      <input type="text" id="last_mpd"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <h6 class="header orange-text" style="margin-bottom: 20px;">Advanced</h6>
+    </div>
+    <div class="col s12 switch">
+        <label>
+          Batch mode
+          <input type="checkbox" id="batch_mode">
+          <span class="lever"style="margin-left: 10px"></span>
+        </label>
+    </div>
+  </div>
+  <div class="row" id="batch_settings" style="display: none;">
+    <div class="input-field col s3">
+      <input style="vertical-align:middle" type="text" value=";" name="separator" id="separator">
+      <label for="separator" class="active">Separator</label>
+    </div>
+    <div class="input-field col s12">
+      <h6 style="margin-bottom: 0px; margin-top: 0px;" class="header orange-text">Batch .mpd files:</h6>
+      <input type="text" id="urls"/>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
